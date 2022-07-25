@@ -1,20 +1,23 @@
 function luggageLoader(a) {
   const luggageInput = []
   var sum = 0;
+  var container = [];
   for (let i = 0; i < a.length; i++) {
     var max = 40;
-    var container = [];
     if ( sum <= max) {
       sum += a[i]
+      console.log(sum)
+      container.push(a[i])
     }
-    container.push(a[i])
-      
-    // container.push(a[i])
-    //  console.log(sum)
-     
-    console.log(container)
+    else {
+      luggageInput.push(a[i])
+    }
+    
+    
   }
+  luggageInput.push(container)
+  console.log(container)
   console.log(luggageInput)
 }
 
-luggageLoader([3, 27, 10])
+luggageLoader([30, 5, 6])
